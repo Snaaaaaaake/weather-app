@@ -38,17 +38,15 @@ const MainPage = (props) => {
 
     return (
         <Container my={20} maxWidth="xs">
-            <Paper>
-                <Box py={5}>
-                    <Typography align="center" variant="h4">Погода на сегодня</Typography>
-                </Box>
-                <ErrorBoundary>
-                    <CityList />
-                </ErrorBoundary>
-                <ErrorBoundary>
-                    <ModalCityCard />
-                </ErrorBoundary>
-            </Paper>
+            <Box py={5}>
+                <Typography align="center" variant="h4">Погода на сегодня</Typography>
+            </Box>
+            <ErrorBoundary>
+                <CityList />
+            </ErrorBoundary>
+            <ErrorBoundary>
+                <ModalCityCard />
+            </ErrorBoundary>
         </Container>
     );
 }

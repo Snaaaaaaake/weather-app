@@ -1,18 +1,18 @@
-const fetchBookListRequest = () => {
+const fetchCityListRequest = () => {
     return {
         type: "FETCH_CITY_LIST_REQUEST",
     }
 };
-const fetchBookListSuccess = (data) => {
+const fetchCityListSuccess = (data) => {
     return {
         type: "FETCH_CITY_LIST_SUCCESS",
         payload: data,
     }
 };
-const fetchBookListFailure = (error) => {
+const fetchCityListFailure = (data) => {
     return {
         type: "FETCH_CITY_LIST_FAILURE",
-        payload: error,
+        payload: data,
     }
 };
 
@@ -28,10 +28,31 @@ const closeModalCity = () => {
     }
 }
 
+const fetchWeeklyWeatherListRequest = () => {
+    return {
+        type: "FETCH_WEEKLY_WEATHER_LIST_REQUEST",
+    }
+};
+const fetchWeeklyWeatherListSuccess = (data) => {
+    return {
+        type: "FETCH_WEEKLY_WEATHER_LIST_SUCCESS",
+        payload: data,
+    }
+};
+const fetchWeeklyWeatherListFailure = (data) => {
+    return {
+        type: "FETCH_WEEKLY_WEATHER_LIST_FAILURE",
+        payload: data,
+    }
+};
+
 export {
-    fetchBookListRequest,
-    fetchBookListSuccess,
-    fetchBookListFailure,
+    fetchCityListRequest,
+    fetchCityListSuccess,
+    fetchCityListFailure,
     openModalCity,
     closeModalCity,
+    fetchWeeklyWeatherListRequest,
+    fetchWeeklyWeatherListSuccess,
+    fetchWeeklyWeatherListFailure,
 };
